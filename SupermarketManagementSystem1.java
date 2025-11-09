@@ -8,6 +8,8 @@ import supermarket.Supermarket;
 import people.Customer;
 import people.Cashier;
 import supermarket.Product;
+import java.awt.*;
+
 
 public class SupermarketManagementSystem1 {
 
@@ -47,12 +49,8 @@ public class SupermarketManagementSystem1 {
 
             switch (choice) {
                 case 1:
-                    // Print Bill
+                    // // Print Bill
                     Customer customer = getCustomerDetails(scanner);
-                    System.out.println("Customer Details:");
-                    System.out.println("Customer ID: " + customer.getCustomerId());
-                    System.out.println("Customer Name: " + customer.getCustomerName());
-                    System.out.println("Customer Phone No: " + customer.getCustomerPhoneNo());
 
                     List<Product> cart = new ArrayList<>();
                     while (true) {
@@ -73,10 +71,57 @@ public class SupermarketManagementSystem1 {
                         }
                     }
 
-                    // Calculate and print the bill
+                    // // Calculate and print the bill
                     double totalBill = calculateBill(cart);
-                    System.out.println("Total Bill: $" + totalBill);
-                    break;
+                    // System.out.println("Total Bill: $" + totalBill);
+                    // break;
+
+
+                    // Now adding Gui to the code
+
+
+                    Frame frame = new Frame("Customer Bill");
+                    frame.setSize(400, 600);
+                    frame.setLayout(new BorderLayout());
+                    frame.setLocationRelativeTo(null); // Center the window
+
+                    //  Customer Info Panel
+                    Panel customerPanel = new Panel(new GridLayout(3, 1));
+                    customerPanel.add(new Label("Customer ID: " + customer.getCustomerId()));
+                    customerPanel.add(new Label("Customer Name: " + customer.getCustomerName()));
+                    customerPanel.add(new Label("Phone No: " + customer.getCustomerPhoneNo()));
+                    customerPanel.setBackground(Color.LIGHT_GRAY);
+                    customerPanel.setFont(new Font("SansSerif", Font.BOLD, 14));
+
+                    //  Product List Panel
+                    Panel productPanel = new Panel(new GridLayout(cart.size(), 1));
+                    for (Product p : cart) {
+                        productPanel.add(new Label("• " + p.getProductName() + " - $" + p.getProductPrice()));
+                    }
+
+                    ScrollPane scrollPane = new ScrollPane();
+                    scrollPane.add(productPanel);
+
+                    //  Total Bill Panel
+                    Panel totalPanel = new Panel();
+                    totalPanel.setLayout(new FlowLayout());
+                    totalPanel.setBackground(Color.YELLOW);
+                    Label totalLabel = new Label("Total Bill: $" + totalBill);
+                    totalLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
+                    totalPanel.add(totalLabel);
+
+                    //  Close Button
+                    Button closeBtn = new Button("Close");
+                    closeBtn.addActionListener(e -> frame.dispose());
+                    totalPanel.add(closeBtn);
+
+                    //  Add Panels to Frame
+                    frame.add(customerPanel, BorderLayout.NORTH);
+                    frame.add(scrollPane, BorderLayout.CENTER);
+                    frame.add(totalPanel, BorderLayout.SOUTH);
+
+                    frame.setVisible(true);    
+                    break;        
 
                 case 2:
                     // Add Product
