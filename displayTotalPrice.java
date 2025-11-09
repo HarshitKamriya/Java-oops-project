@@ -10,14 +10,12 @@ public class displayTotalPrice extends Main {
         Frame f = new Frame("Total Price");
         f.setSize(300, 150);
         f.setLayout(new BorderLayout());
-        f.setLocationRelativeTo(null); // Center the window
+        f.setLocationRelativeTo(null); 
 
-        // Price Label
         Label priceLabel = new Label("Total Price: $" + totalPrice, Label.CENTER);
         priceLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
         f.add(priceLabel, BorderLayout.CENTER);
 
-        // Close Button
         Panel bottompanel = new Panel();
         Button btn = new Button("Close");
         btn.addActionListener(e -> f.dispose());
