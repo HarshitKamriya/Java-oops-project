@@ -97,6 +97,10 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
             10. displyProductById class :
                                 we are using GUI in this to display the product by Id , it is extending the Main class
                                 Here we are using awt for gui. 
+            11. LogOutCaisher class:
+                               we are using GUI in this to display caisher logout , it is extending the Main class
+                                Here we are using awt for gui.
+
 
 
                

@@ -37,6 +37,7 @@ public class SupermarketManagementSystem1 extends Main {
             scn.nextLine(); // Consume newline
         }
 
+
         // Main menu loop
         while (true) {
             Main.printMainMenu(); // displaying the main menu to the caisher
@@ -84,13 +85,7 @@ public class SupermarketManagementSystem1 extends Main {
                     break;
 
                 case 7:
-                    System.out.println("Thank you for using this application");
-                    double totalprice = Supermarket.getTotalPrice();
-                    double bonous = totalprice/100;
-                    System.out.println("Your Bonous for this transaction is $"+bonous);
-                    // Logout Cashier
-                    System.out.println("Logged out Cashier with ID: " + cashierId);
-                    // Return to the login screen or exit the program if needed.
+                    new LogOutCaisher(cashierId);
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
