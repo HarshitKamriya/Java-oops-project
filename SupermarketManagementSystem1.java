@@ -70,34 +70,12 @@ public class SupermarketManagementSystem1 extends Main {
 
                 case 4:
                     // Get Product List
-                   
+                    new displayProductList();
                     break;
 
                 case 5:
                     // Get Total Price
-                    double totalPrice = Supermarket.getTotalPrice();
-                    System.out.println("Total Price: $" + totalPrice);
-
-
-                    Frame frame2 = new Frame("Total Price");
-                    frame2.setSize(300, 150);
-                    frame2.setLayout(new BorderLayout());
-                    frame2.setLocationRelativeTo(null); // Center the window
-
-                    //  Price Label
-                    Label priceLabel = new Label("Total Price: $" + totalPrice, Label.CENTER);
-                    priceLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
-                    frame2.add(priceLabel, BorderLayout.CENTER);
-
-                    //  Close Button
-                    Panel bottomPanel2 = new Panel();
-                    Button closeBtn2 = new Button("Close");
-                    closeBtn2.addActionListener(e -> frame2.dispose());
-                    bottomPanel2.add(closeBtn2);
-                    frame2.add(bottomPanel2, BorderLayout.SOUTH);
-
-                    frame2.setVisible(true);
-
+                    new displayTotalPrice();
                     break;
 
                 case 6:
@@ -118,18 +96,14 @@ public class SupermarketManagementSystem1 extends Main {
                     break;
 
                 case 7:
-
                     System.out.println("Thank you for using this application");
                     double totalprice = Supermarket.getTotalPrice();
                     double bonous = totalprice/100;
                     System.out.println("Your Bonous for this transaction is $"+bonous);
                     // Logout Cashier
-
                     System.out.println("Logged out Cashier with ID: " + cashierId);
-
                     // Return to the login screen or exit the program if needed.
                     return;
-
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }

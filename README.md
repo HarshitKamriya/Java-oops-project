@@ -52,11 +52,8 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
                                          we will traverse through the array and if the id matches with the product object and we will return that product object.
                                          
 
-            5. Main class (SupermarketManagementSystem1) : 
-                        1. taking caisher details . we are looping until the valid caisher details are entered or not.
-                        2. using switch case for the caiser who appered to our application as  now he/she is calculating the bill of customer
-                        3. Printing the menu to caisher so that , he can choose what he need to do
-                        4. we have some function in this and their role is:
+            5. Main class :                         
+                         we have some function in this and their role is:
                               1. getCustomerDetails(Scanner scanner)=> here we are taking customer detail such as Id , name ,phone no and      
                                                                        calling customer class constructor to initialize a new customer object
                                                                        and returning it..
@@ -71,6 +68,39 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
                               4. getProductAttributes(Scanner scanner) => In this function I have written the logic so that we can get Product 
                                                                           from our product list with their Id and then return it.
                               5. printMainMenu() => In this I have written all the options available to caisher he can do.
+
+
+            6. SupermarketManagementSystem1 class :
+                        1. taking caisher details . we are looping until the valid caisher details are entered or not.
+                        2. using switch case for the caiser who appered to our application as  now he/she is calculating the bill of customer
+                        3. use while loop and switch case =>
+                                    calling printMenu() function from Main class ->
+                                                                         Printing the menu to caisher so that , 
+                                                                         he can choose what he need to do.
+
+
+            7. displayBill class:
+                                we are using GUI in this to display the bill , it is extending the Main class
+                                Here we are using awt for gui.
+
+
+            
+            8. displayProductList class:
+                                we are using GUI in this to display the product list , it is extending the Main class
+                                Here we are using awt for gui.
+
+
+            9. displayTotalPrice class :
+                                we are using GUI in this to display the total price , it is extending the Main class
+                                Here we are using awt for gui.  
+               
+
+
+                        
+                        
+
+
+
 
 
 
