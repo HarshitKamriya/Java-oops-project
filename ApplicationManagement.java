@@ -11,7 +11,7 @@ import Users.Customer;
 
 import java.awt.*;
 
-public class SupermarketManagementSystem1 extends Main {
+public class ApplicationManagement extends Main {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -36,7 +36,6 @@ public class SupermarketManagementSystem1 extends Main {
             }
             scn.nextLine(); // Consume newline
         }
-
 
         // Main menu loop
         while (true) {
