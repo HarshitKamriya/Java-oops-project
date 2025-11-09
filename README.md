@@ -1,4 +1,4 @@
-# Supermarket-JAVA-Proj
+# Supermarket-JAVA-OPPS-Project
 This is my Third semester project built for OOPS- JAVA 
 
 What we are doing in this we are building an system which is basically store the customer details and the product they are buying and displaying the price of that product to the user
