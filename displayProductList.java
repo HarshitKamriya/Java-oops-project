@@ -1,6 +1,7 @@
-import supermarket.Product;
-import supermarket.Supermarket;
 import java.awt.*;
+
+import Application.Product;
+import Application.Supermarket;
 
 public class displayProductList extends Main {
     displayProductList() {

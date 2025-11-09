@@ -92,7 +92,13 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
 
             9. displayTotalPrice class :
                                 we are using GUI in this to display the total price , it is extending the Main class
-                                Here we are using awt for gui.  
+                                Here we are using awt for gui. 
+
+            10. displyProductById class :
+                                we are using GUI in this to display the product by Id , it is extending the Main class
+                                Here we are using awt for gui. 
+
+
                
 
 
@@ -105,7 +111,7 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
 
 
 
-Thank you , This is short and simple application Created By Harshit, and now working to upgrade it more.
+Thank you , This is short and simple application Created By Harshit and Shivam and now working to upgrade it more.
 
                                              
 

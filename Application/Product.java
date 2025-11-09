@@ -1,4 +1,4 @@
-package supermarket;
+package Application;
 
 public class Product {
     private int product_id;

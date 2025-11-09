@@ -1,6 +1,6 @@
 import java.awt.*;
 
-import supermarket.Supermarket;
+import Application.Supermarket;
 
 public class displayTotalPrice extends Main {
     displayTotalPrice() {

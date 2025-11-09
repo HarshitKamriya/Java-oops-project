@@ -3,12 +3,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.awt.*;
 
-import supermarket.Supermarket;
-import people.Customer;
-import people.Cashier;
-import supermarket.Product;
+import Application.Product;
+import Application.Supermarket;
+import Users.Cashier;
+import Users.Customer;
+
+import java.awt.*;
 
 public class SupermarketManagementSystem1 extends Main {
 
@@ -79,20 +80,7 @@ public class SupermarketManagementSystem1 extends Main {
                     break;
 
                 case 6:
-                    // Get Product by ID
-                    System.out.print("Enter Product ID: ");
-                    int prodId = scn.nextInt();
-                    scn.nextLine(); // Consume newline
-                    Product productById = getProductById(prodId);
-                    if (productById != null) {
-                        System.out.println("Product Details:");
-                        System.out.println("Product ID: " + productById.getProductId());
-                        System.out.println("Product Name: " + productById.getProductName());
-                        System.out.println("Product Price: $" + productById.getProductPrice());
-                        System.out.println("Product Quantity: " + productById.getProductQuantity());
-                    } else {
-                        System.out.println("Product not found.");
-                    }
+                    new displayProductById();
                     break;
 
                 case 7:

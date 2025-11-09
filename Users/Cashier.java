@@ -1,4 +1,4 @@
-package people;
+package Users;
 
 public class Cashier {
     private int cashierId;

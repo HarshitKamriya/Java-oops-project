@@ -1,4 +1,4 @@
-package supermarket;
+package Application;
 import java.util.*;
 
 public class Supermarket {

@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import people.Cashier;
-import people.Customer;
-import supermarket.Product;
-import supermarket.Supermarket;
+import Application.Product;
+import Application.Supermarket;
+import Users.Cashier;
+import Users.Customer;
 
 public class Main {
     public static Customer getCustomerDetails(Scanner scn) {
