@@ -145,13 +145,50 @@ public class SupermarketManagementSystem1 {
                 case 4:
                     // Get Product List
                     Product[] productList = Supermarket.getProductList();
-                    System.out.println("Product List:");
+                    // System.out.println("Product List:");
+                    // for (Product p : productList) {
+                    //     System.out.println("Product ID: " + p.getProductId());
+                    //     System.out.println("Product Name: " + p.getProductName());
+                    //     System.out.println("Product Price: $" + p.getProductPrice());
+                    //     System.out.println("Product Quantity: " + p.getProductQuantity());
+                    // }
+
+                    Frame frame1 = new Frame("Product List");
+                    frame1.setSize(500, 600);
+                    frame1.setLayout(new BorderLayout());
+                    frame1.setLocationRelativeTo(null); // Center the window
+
+                    // 🧾 Title
+                    Label title = new Label("Available Products", Label.CENTER);
+                    title.setFont(new Font("SansSerif", Font.BOLD, 18));
+                    frame1.add(title, BorderLayout.NORTH);
+
+                    Panel productPanel1 = new Panel();
+                    productPanel1.setLayout(new GridLayout(productList.length, 1, 5, 5));
+
                     for (Product p : productList) {
-                        System.out.println("Product ID: " + p.getProductId());
-                        System.out.println("Product Name: " + p.getProductName());
-                        System.out.println("Product Price: $" + p.getProductPrice());
-                        System.out.println("Product Quantity: " + p.getProductQuantity());
+                        Panel itemPanel = new Panel(new GridLayout(4, 1));
+                        itemPanel.setBackground(new Color(230, 240, 255));
+                        itemPanel.add(new Label("Product ID: " + p.getProductId()));
+                        itemPanel.add(new Label("Name: " + p.getProductName()));
+                        itemPanel.add(new Label("Price: $" + p.getProductPrice()));
+                        itemPanel.add(new Label("Quantity: " + p.getProductQuantity()));
+                        itemPanel.setFont(new Font("Dialog", Font.PLAIN, 14));
+                        productPanel1.add(itemPanel);
                     }
+
+                    ScrollPane scrollPane1 = new ScrollPane();
+                    scrollPane1.add(productPanel1);
+                    frame1.add(scrollPane1, BorderLayout.CENTER);
+
+                    // ❌ Close Button
+                    Panel bottomPanel = new Panel();
+                    Button closeBtn1 = new Button("Close");
+                    closeBtn1.addActionListener(e -> frame1.dispose());
+                    bottomPanel.add(closeBtn1);
+                    frame1.add(bottomPanel, BorderLayout.SOUTH);
+
+                    frame1.setVisible(true);
                     break;
 
                 case 5:
