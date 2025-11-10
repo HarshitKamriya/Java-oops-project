@@ -70,7 +70,7 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
                               5. printMainMenu() => In this I have written all the options available to caisher he can do.
 
 
-            6. SupermarketManagementSystem1 class :
+            6. ApplicationMangement class :
                         1. taking caisher details . we are looping until the valid caisher details are entered or not.
                         2. using switch case for the caiser who appered to our application as  now he/she is calculating the bill of customer
                         3. use while loop and switch case =>
@@ -115,7 +115,7 @@ Work flow :-> 1. Caisher class  => 1. Storing the caisher Id  # private
 
 
 
-Thank you , This is short and simple application Created By Harshit and Shivam and now working to upgrade it more.
+Thank you , This is short and simple application Created By Harshit  and now working to upgrade it more.
 
                                              
 

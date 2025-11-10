@@ -37,7 +37,6 @@ public class ApplicationManagement extends Main {
             scn.nextLine(); // Consume newline
         }
 
-
         // Main menu loop
         while (true) {
             Main.printMainMenu(); // displaying the main menu to the caisher
@@ -85,11 +84,7 @@ public class ApplicationManagement extends Main {
                     break;
 
                 case 7:
-<<<<<<< HEAD:ApplicationManagement.java
                     new LogOutCaisher(cashierId);
-=======
-                    new LogOutCaisher(cashierId)
->>>>>>> 3ca683d81893060b239d900f99f46cb4a5355fc1:SupermarketManagementSystem1.java
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
